@@ -16,13 +16,15 @@
 @property (nonatomic, strong) NSArray *movies;
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
 
+
 @end
 
 @implementation MoviesViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+   
+
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     
@@ -34,7 +36,10 @@
     [self.tableView insertSubview:self.refreshControl atIndex:0];
     //^prevents the loading circle from briefly obscuring the first cell
     //[self.tableView addSubview:self.refreshControl];
+
+
 }
+
 
 - (void)fetchMovies {
     NSURL *url = [NSURL URLWithString:@"https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed"];
@@ -43,6 +48,24 @@
     NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
            if (error != nil) {
                NSLog(@"%@", [error localizedDescription]);
+               UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Zoinks, Scoob!" message:@"Check your network connection and try again." preferredStyle:(UIAlertControllerStyleAlert)];
+               
+               UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+                   //handle cancel response here - doing nothing will dismiss the view
+                   NSLog(@"nice");
+               }];
+               
+               [alert addAction:cancelAction];
+               
+               UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+                   //add okay action to the alert controller
+
+               }];
+               
+               [alert addAction:okAction];
+               [self presentViewController:alert animated:YES completion:^{
+                   // optional code for what happens after the alert controller has finished presenting
+               }];
            }
            else {
                NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
