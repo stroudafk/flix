@@ -124,6 +124,10 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="DMW-4C-B9C">
+                                        <rect key="frame" x="185" y="88" width="20" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <viewLayoutGuide key="contentLayoutGuide" id="jPU-w3-c9O"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="v2t-3r-z0v"/>
@@ -136,6 +140,7 @@
                     <connections>
                         <outlet property="backdropView" destination="xKO-sK-BoI" id="AnT-Fk-NhY"/>
                         <outlet property="posterView" destination="zNo-e5-bi3" id="Zvv-4O-y8o"/>
+                        <outlet property="progressIndicator" destination="DMW-4C-B9C" id="Y3r-WW-sUK"/>
                         <outlet property="synopsisLabel" destination="pxd-ss-gzR" id="1Kr-3q-zA1"/>
                         <outlet property="titleLabel" destination="wdR-hK-8Ji" id="Zxq-Zy-h32"/>
                     </connections>
