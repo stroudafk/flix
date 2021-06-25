@@ -10,12 +10,13 @@
 #import  "UIImageView+AFNetworking.h"
 #import "DetailsViewController.h"
 
-@interface MoviesViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface MoviesViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSArray *movies;
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loadIndicator;
+
 
 
 @end
@@ -33,6 +34,7 @@
     [self.loadIndicator startAnimating];
     
     [self fetchMovies];
+    
     
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(fetchMovies) forControlEvents:UIControlEventValueChanged];
@@ -105,6 +107,7 @@
     //check if valid URL
     NSURL *posterURL = [NSURL URLWithString:fullPosterURLString];
     cell.posterView.image = nil;
+    cell.posterView.layer.cornerRadius = 10.0;
     //clear out previous image before loading in new one (bc of lazy loading)
     [cell.posterView setImageWithURL:posterURL];
     

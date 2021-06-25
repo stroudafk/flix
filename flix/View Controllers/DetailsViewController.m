@@ -24,8 +24,8 @@
     [super viewDidLoad];
 
     // Do any additional setup after loading the view.
-    
-    
+    self.posterView.layer.cornerRadius = 20.0;
+   
     NSString *baseURLString = @"https://image.tmdb.org/t/p/w500";
     NSString *posterURLString = self.movie[@"poster_path"];
     NSString *fullPosterURLString = [baseURLString stringByAppendingString:posterURLString];
@@ -44,6 +44,14 @@
     
     self.titleLabel.text = self.movie[@"title"];
     self.synopsisLabel.text = self.movie[@"overview"];
+    
+
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.colors = @[(id) [UIColor clearColor].CGColor, (id)[UIColor blackColor].CGColor];
+    
+    gradient.frame = self.backdropView.bounds;
+    
+    [self.backdropView.layer insertSublayer:gradient atIndex:0];
     
     [self.titleLabel sizeToFit];
     [self.synopsisLabel sizeToFit];
