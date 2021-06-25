@@ -22,7 +22,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0032399263320000002" green="0.011573102869999999" blue="0.089160341209999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="167" id="fMM-ee-qRF" customClass="MovieCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="167" id="fMM-ee-qRF" customClass="MovieCell">
                                         <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="167"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fMM-ee-qRF" id="eGy-hu-ekq">
@@ -82,7 +82,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jnD-gX-unw" customClass="Movie">
-                                <rect key="frame" x="0.0" y="32" width="390" height="812"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0032399263320000002" green="0.011573102869999999" blue="0.089160341209999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="ely-cD-0gs">
@@ -108,6 +108,7 @@
                                         <size key="customSize" width="142" height="189"/>
                                         <connections>
                                             <outlet property="posterView" destination="nHx-x8-SXd" id="zbd-PU-xhI"/>
+                                            <segue destination="sCa-yF-aNp" kind="show" id="qj8-i2-c7a"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -125,25 +126,10 @@
             </objects>
             <point key="canvasLocation" x="993.84615384615381" y="806.87203791469187"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="zcD-It-fXC">
-            <objects>
-                <viewController id="eTf-30-z1P" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7bR-Hb-Rem">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="mel-7u-gJN"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Gnf-gR-X4J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="994" y="1504"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="fC0-Np-v5P">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5uA-aI-7Kl" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBarsOnSwipe="YES" id="5uA-aI-7Kl" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="now_playing_tabbar_item" id="kfM-mO-HaD"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" alpha="0.0" contentMode="scaleToFill" id="d3R-yw-rAB">
@@ -188,7 +174,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UZw-NQ-Yho">
-                                <rect key="frame" x="0.0" y="30" width="390" height="814"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xKO-sK-BoI">
@@ -239,7 +225,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F67-1x-T4o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-18.46153846153846" y="1503.5545023696682"/>
+            <point key="canvasLocation" x="424.61538461538458" y="1542.654028436019"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ZMj-0X-At7">
@@ -260,6 +246,9 @@
             <point key="canvasLocation" x="826" y="-620"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="QXB-DL-fqh"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="now_playing_tabbar_item" width="21" height="21"/>
         <image name="square.grid.2x2.fill" catalog="system" width="128" height="114"/>
