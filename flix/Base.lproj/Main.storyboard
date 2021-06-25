@@ -45,7 +45,7 @@
                                                     <rect key="frame" x="131" y="37" width="252" height="119"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <string key="text">Tanjirō Kamado, joined with Inosuke Hashibira, a boy raised by boars who wears a boar's head, and Zenitsu Agatsuma, a scared boy who reveals his true power when he sleeps, boards the Infinity Train on a new mission with the Fire Hashira, Kyōjurō Rengoku, to defeat a demon who has been tormenting the people and killing the demon slayers who oppose it!</string>
-                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -191,7 +191,7 @@
                                         <rect key="frame" x="25" y="86" width="133" height="194"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdR-hK-8Ji">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdR-hK-8Ji">
                                         <rect key="frame" x="16" y="288" width="266" height="37"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
@@ -224,6 +224,7 @@
                     <navigationItem key="navigationItem" id="9vJ-aI-4E7"/>
                     <connections>
                         <outlet property="backdropView" destination="xKO-sK-BoI" id="AnT-Fk-NhY"/>
+                        <outlet property="categoryLabel" destination="IFu-h6-vAv" id="M3P-Ts-7v4"/>
                         <outlet property="posterView" destination="zNo-e5-bi3" id="Zvv-4O-y8o"/>
                         <outlet property="synopsisLabel" destination="pxd-ss-gzR" id="1Kr-3q-zA1"/>
                         <outlet property="titleLabel" destination="wdR-hK-8Ji" id="Zxq-Zy-h32"/>
@@ -249,7 +250,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gMU-FZ-A1a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="826" y="-620"/>
+            <point key="canvasLocation" x="508" y="-624"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

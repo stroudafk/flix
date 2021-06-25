@@ -46,9 +46,6 @@
     //^prevents the loading circle from briefly obscuring the first cell
     //but [self.tableView addSubview:self.refreshControl]; will also work
 
-    
-    
-
 }
 
 

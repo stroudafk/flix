@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *posterView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *synopsisLabel;
+@property (weak, nonatomic) IBOutlet UILabel *categoryLabel;
 
 
 
@@ -29,6 +30,7 @@
     NSString *baseURLString = @"https://image.tmdb.org/t/p/w500";
     NSString *posterURLString = self.movie[@"poster_path"];
     NSString *fullPosterURLString = [baseURLString stringByAppendingString:posterURLString];
+
     
     //check if valid URL
     NSURL *posterURL = [NSURL URLWithString:fullPosterURLString];
@@ -41,10 +43,19 @@
     NSURL *backdropURL = [NSURL URLWithString:fullBackdropURLString];
     [self.backdropView setImageWithURL:backdropURL];
 
-    
+    NSString *reformattedDate = self.movie[@"release_date"];
+    reformattedDate = [reformattedDate substringFromIndex:5];
+    NSString *months = [reformattedDate substringToIndex:1];
+    NSInteger monthsInt = [months integerValue];
+    if( monthsInt < 10){
+        reformattedDate = [reformattedDate substringFromIndex:1];
+    }
+
+
     self.titleLabel.text = self.movie[@"title"];
     self.synopsisLabel.text = self.movie[@"overview"];
-    
+    self.categoryLabel.text = reformattedDate;
+
 
     CAGradientLayer *gradient = [CAGradientLayer layer];
     gradient.colors = @[(id) [UIColor clearColor].CGColor, (id)[UIColor blackColor].CGColor];
