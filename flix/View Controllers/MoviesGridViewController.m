@@ -29,6 +29,7 @@
     
     UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *) self.collectionView.collectionViewLayout;
     
+    
     layout.minimumLineSpacing = 0;
     layout.minimumInteritemSpacing = 0;
     
@@ -95,9 +96,9 @@
     //check if valid URL
     NSURL *posterURL = [NSURL URLWithString:fullPosterURLString];
     cell.posterView.image = nil;
-    //clear out previous image before loading in new one (bc of lazy loading)
-    [cell.posterView setImageWithURL:posterURL];
     
+    [cell.posterView setImageWithURL:posterURL];
+    cell.posterView.layer.cornerRadius = 30.0;
     return cell;
 }
 

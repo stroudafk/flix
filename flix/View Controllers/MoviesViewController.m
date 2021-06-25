@@ -19,6 +19,7 @@
 
 
 
+
 @end
 
 @implementation MoviesViewController
@@ -35,6 +36,7 @@
     
     [self fetchMovies];
     
+
     
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(fetchMovies) forControlEvents:UIControlEventValueChanged];
@@ -110,9 +112,10 @@
     cell.posterView.layer.cornerRadius = 10.0;
     //clear out previous image before loading in new one (bc of lazy loading)
     [cell.posterView setImageWithURL:posterURL];
-    
+        
     return cell;
 }
+
 
 #pragma mark - Navigation
 
