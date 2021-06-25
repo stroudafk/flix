@@ -13,7 +13,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *posterView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *synopsisLabel;
-@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *progressIndicator;
+
 
 
 @end
@@ -22,7 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.progressIndicator startAnimating];
+
     // Do any additional setup after loading the view.
     
     
@@ -40,7 +40,6 @@
     //check if valid URL
     NSURL *backdropURL = [NSURL URLWithString:fullBackdropURLString];
     [self.backdropView setImageWithURL:backdropURL];
-    [self.progressIndicator stopAnimating];
 
     
     self.titleLabel.text = self.movie[@"title"];
