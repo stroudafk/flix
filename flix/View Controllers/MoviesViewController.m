@@ -7,8 +7,10 @@
 
 #import "MoviesViewController.h"
 #import "MovieCell.h"
-#import  "UIImageView+AFNetworking.h"
 #import "DetailsViewController.h"
+#import "UIImageView+AFNetworking.h"
+#import "SVProgressHUD.h"
+
 
 @interface MoviesViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
@@ -27,28 +29,32 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
    
-
+    
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     
     // Do any additional setup after loading the view.
-    [self.loadIndicator startAnimating];
+
     
     [self fetchMovies];
-    
 
     
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(fetchMovies) forControlEvents:UIControlEventValueChanged];
+    self.refreshControl.tintColor = [UIColor whiteColor];
     [self.tableView insertSubview:self.refreshControl atIndex:0];
     //^prevents the loading circle from briefly obscuring the first cell
     //but [self.tableView addSubview:self.refreshControl]; will also work
-    [self.loadIndicator stopAnimating];
+
+    
+    
 
 }
 
 
 - (void)fetchMovies {
+
+    [self.loadIndicator startAnimating];
     NSURL *url = [NSURL URLWithString:@"https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:10.0];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:nil delegateQueue:[NSOperationQueue mainQueue]];
@@ -64,7 +70,7 @@
                
                [alert addAction:okAction];
                [self presentViewController:alert animated:YES completion:^{
-                   // optional code for what happens after the alert controller has finished presenting
+                   
                }];
            }
            else {
@@ -74,14 +80,13 @@
                self.movies = dataDictionary[@"results"];
                
                [self.tableView reloadData];
-               // TODO: Get the array of movies
-               // TODO: Store the movies in a property to use elsewhere
-               // TODO: Reload your table view data
+
            }
             [self.refreshControl endRefreshing];
        }];
     [task resume];
-
+    
+    [self.loadIndicator stopAnimating];
 }
 
 - (void)didRecieveMemoryWarning {

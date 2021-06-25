@@ -10,6 +10,10 @@
 		311B27D978CB7065ED77C707 /* Pods_flix_flixUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C33F7FB123312FD5FE6789CD /* Pods_flix_flixUITests.framework */; };
 		562AD7FC2685468100D9B701 /* MoviesGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 562AD7FB2685468100D9B701 /* MoviesGridViewController.m */; };
 		562AD7FF268548C500D9B701 /* MovieCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 562AD7FE268548C500D9B701 /* MovieCollectionCell.m */; };
+		56C6C534268689400023E707 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 56C6C52C2686893F0023E707 /* SVRadialGradientLayer.m */; };
+		56C6C535268689400023E707 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 56C6C52D2686893F0023E707 /* SVIndefiniteAnimatedView.m */; };
+		56C6C536268689400023E707 /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 56C6C52E2686893F0023E707 /* SVProgressAnimatedView.m */; };
+		56C6C537268689400023E707 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 56C6C531268689400023E707 /* SVProgressHUD.m */; };
 		56EF3FB526838F5600F54923 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56EF3FB426838F5600F54923 /* AppDelegate.m */; };
 		56EF3FB826838F5600F54923 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56EF3FB726838F5600F54923 /* SceneDelegate.m */; };
 		56EF3FBE26838F5600F54923 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56EF3FBC26838F5600F54923 /* Main.storyboard */; };
@@ -51,6 +55,14 @@
 		562AD7FB2685468100D9B701 /* MoviesGridViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoviesGridViewController.m; sourceTree = "<group>"; };
 		562AD7FD268548C500D9B701 /* MovieCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieCollectionCell.h; sourceTree = "<group>"; };
 		562AD7FE268548C500D9B701 /* MovieCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieCollectionCell.m; sourceTree = "<group>"; };
+		56C6C52C2686893F0023E707 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
+		56C6C52D2686893F0023E707 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		56C6C52E2686893F0023E707 /* SVProgressAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressAnimatedView.m; sourceTree = "<group>"; };
+		56C6C52F268689400023E707 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		56C6C530268689400023E707 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		56C6C531268689400023E707 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		56C6C532268689400023E707 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVRadialGradientLayer.h; sourceTree = "<group>"; };
+		56C6C533268689400023E707 /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressAnimatedView.h; sourceTree = "<group>"; };
 		56EF3FB026838F5600F54923 /* flix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56EF3FB326838F5600F54923 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		56EF3FB426838F5600F54923 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -119,6 +131,21 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		56C6C52B268689130023E707 /* Progress Animations */ = {
+			isa = PBXGroup;
+			children = (
+				56C6C530268689400023E707 /* SVIndefiniteAnimatedView.h */,
+				56C6C52D2686893F0023E707 /* SVIndefiniteAnimatedView.m */,
+				56C6C533268689400023E707 /* SVProgressAnimatedView.h */,
+				56C6C52E2686893F0023E707 /* SVProgressAnimatedView.m */,
+				56C6C52F268689400023E707 /* SVProgressHUD.h */,
+				56C6C531268689400023E707 /* SVProgressHUD.m */,
+				56C6C532268689400023E707 /* SVRadialGradientLayer.h */,
+				56C6C52C2686893F0023E707 /* SVRadialGradientLayer.m */,
+			);
+			path = "Progress Animations";
+			sourceTree = "<group>";
+		};
 		56EF3FA726838F5600F54923 = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +171,7 @@
 		56EF3FB226838F5600F54923 /* flix */ = {
 			isa = PBXGroup;
 			children = (
+				56C6C52B268689130023E707 /* Progress Animations */,
 				562AD80026854AC500D9B701 /* Views */,
 				56EF3FED2683A13200F54923 /* View Controllers */,
 				56EF3FEC2683A10A00F54923 /* Models */,
@@ -466,6 +494,10 @@
 				56EF3FC626838F5700F54923 /* main.m in Sources */,
 				56EF3FB826838F5600F54923 /* SceneDelegate.m in Sources */,
 				562AD7FC2685468100D9B701 /* MoviesGridViewController.m in Sources */,
+				56C6C537268689400023E707 /* SVProgressHUD.m in Sources */,
+				56C6C535268689400023E707 /* SVIndefiniteAnimatedView.m in Sources */,
+				56C6C534268689400023E707 /* SVRadialGradientLayer.m in Sources */,
+				56C6C536268689400023E707 /* SVProgressAnimatedView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
