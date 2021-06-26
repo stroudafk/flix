@@ -1,8 +1,8 @@
-# Project 2 - *Name of App Here*
+# Project 2 - *flix*
 
-**Name of your app** is a movies app using the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
+**flix** is a movies app using the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
-Time spent: **7+6** hours spent in total
+Time spent: **20** hours spent in total
 
 ## User Stories
 
@@ -11,20 +11,20 @@ The following **required** functionality is complete:
 - [x] User sees an app icon on the home screen and a styled launch screen.
 - [x] User can view a list of movies currently playing in theaters from The Movie Database.
 - [x] Poster images are loaded using the UIImageView category in the AFNetworking library.
-- [ ] User sees a loading state while waiting for the movies API.
+- [x] User sees a loading state while waiting for the movies API.
 - [x] User can pull to refresh the movie list.
 - [x] User sees an error message when there's a networking error.
 - [x] User can tap a tab bar button to view a grid layout of Movie Posters using a CollectionView.
 
 The following **optional** features are implemented:
 
-- [ ] User can tap a poster in the collection view to see a detail screen of that movie
+- [x] User can tap a poster in the collection view to see a detail screen of that movie
 - [ ] User can search for a movie.
 - [ ] All images fade in as they are loading.
 - [ ] User can view the large movie poster by tapping on a cell.
 - [ ] For the large poster, load the low resolution image first and then switch to the high resolution image when complete.
-- [ ] Customize the selection effect of the cell.
-- [ ] Customize the navigation bar.
+- [x] Customize the selection effect of the cell.
+- [x] Customize the navigation bar.
 - [ ] Customize the UI.
 - [ ] User can view the app on various device sizes and orientations.
 - [ ] Run your app on a real device.
