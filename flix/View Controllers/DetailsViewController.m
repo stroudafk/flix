@@ -42,7 +42,7 @@
     //check if valid URL
     NSURL *backdropURL = [NSURL URLWithString:fullBackdropURLString];
     [self.backdropView setImageWithURL:backdropURL];
-
+    
     NSString *reformattedDate = self.movie[@"release_date"];
     reformattedDate = [reformattedDate substringFromIndex:5];
     NSString *months = [reformattedDate substringToIndex:1];
